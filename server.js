@@ -72,7 +72,7 @@ function isTokenBlacklisted(req, res, next) {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet());
 app.use(cors());
 
@@ -207,18 +207,17 @@ setupDatabase().catch(error => {
     console.error('Error setting up database:', error);
 });
 // Routes
-
-// Serve HTML files
+// Serve HTML files for specific routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, 'register.html'));
+    res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'login.html'));
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
 
 
