@@ -13,7 +13,7 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>Register</title>
+  <title>JobConnect</title>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
     <header id="header" class="header">
       <!-- Logo -->
       <div class="main_logo">
-        <img src="/img/logo_img.jpg" class="logo_img" alt="Welcome To JobConnect">
+        <img src="img/logo_img.jpg" class="logo_img" alt="Welcome To JobConnect">
       </div>
 
 <!-- Navbar for pc -->
@@ -84,7 +84,7 @@
               JOB MATCHING
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item dropdown__li_inner_link" href="#">Admissions Events</a>
+              <a class="dropdown-item dropdown__li_inner_link" href="#">Vacancies</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -93,7 +93,7 @@
               COURSES
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item dropdown__li_inner_link" href="#">Alumni</a>
+              <a class="dropdown-item dropdown__li_inner_link" href="#">Lecturers</a>
               
             </div>
           </li>
@@ -108,12 +108,16 @@
               <a class="dropdown-item" href="#about">Learn more</a>
             </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="registerItem">
               <a class="btn btn-sm btn-primary nav-btn" href="register.html">Register</a>
-            </li>
-            <li class="nav-item">
+          </li>
+          <li class="nav-item" id="loginItem">
               <a class="btn btn-sm btn-primary nav-btn" href="login.html">Login</a>
-            </li>            
+          </li> 
+          <li class="nav-item" id="logoutItem" style="display: none;">
+              <a class="btn btn-sm btn-secondary nav-btn" href="#" id="logoutButton">Logout</a>
+          </li>
+                              
           <!-- Search icon flip -->
           <li class="nav-item">
             <i class="fas fa-search fa-flip-horizontal"></i>
