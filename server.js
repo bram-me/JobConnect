@@ -351,11 +351,6 @@ app.post('/logout', async (req, res) => {
     });
 });
 
-// Function to clean up expired tokens
-async function cleanupExpiredTokens() {
-    const now = new Date();
-    await query('DELETE FROM tokens WHERE expires_at < ?', [now]);
-}
 
 // Cleanup expired tokens after a logout
 cleanupExpiredTokens();
