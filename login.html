@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- Header -->
+    <header id="header" class="header">
+      <!-- Logo -->
+      <div class="main_logo">
+        <img src="img/logo_img.jpg" class="logo_img" alt="Welcome To JobConnect">
+      </div>
+
+<!-- Navbar for pc -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light for__pc">
+    <div class="container-fluid">
+      <a href="" class="navbar-brand"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              SKILLS TRAINING
+            </a>
+            <div class="dropdown-menu one" aria-labelledby="navbarDropdown">
+              <div class="row">
+                <div class="col-md-6 col-lg-6 first__column">
+                  <a href="" class="dropdown__heading">Short-Course Programs</a>
+                  <ul class="dropdown__ul_link">
+                    <li class="dropdown__li_link">
+                      <a href="" class="dropdown__li_inner_link">Agricultural Economics</a>
+                    </li>
+                    <li class="dropdown__li_link"><a href="" class="dropdown__li_inner_link">
+                        Information Technology</a></li>
+                  </ul>
+                  <h4 class="dropdown__heading">Economics and Business Studies</h4>
+                  <ul class="dropdown__ul_link">
+                    <li class="dropdown__li_link">
+                      <a href="" class="dropdown__li_inner_link">E-Commerce </a>
+                    </li>
+                    <li class="dropdown__li_link"><a href="" class="dropdown__li_inner_link">Runway Startup
+                       Statistics</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-6 col-lg-6 second__column">
+                  <a href="" class="dropdown__heading">Artificial Intelligence</a>
+                  <div style="min-width:387px;margin-bottom:17px;">
+                    <p>Artificial Intelligence (AI): A branch of computer science that 
+                      focuses on creating systems capable of performing tasks that typically
+                       require human intelligence, such as problem-solving, learning, and 
+                       decision-making.</p>
+                  </div>
+                  <ul class="dropdown__ul_link">
+                    <li class="dropdown__li_link">
+                      <a href="" class="dropdown__li_inner_link">Overview</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              JOB MATCHING
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item dropdown__li_inner_link" href="#">Admissions Events</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              COURSES
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item dropdown__li_inner_link" href="#">Alumni</a>
+              
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              ABOUT
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 295px; padding: 30px;">
+              <p>JobConnect is a mobile application designed to address the unemployment crisis by connecting young job seekers
+                 with job opportunities tailored to their existing skills while offering localized, free courses to upskill them.</p>
+              <a class="dropdown-item" href="#about">Learn more</a>
+            </div>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-sm btn-primary nav-btn" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-sm btn-primary nav-btn" href="login.html">Login</a>
+            </li>            
+          <!-- Search icon flip -->
+          <li class="nav-item">
+            <i class="fas fa-search fa-flip-horizontal"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Navbar for mob -->
+  <a class="menu-toggle rounded for__mob" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">JOBCONNECT</a>
+      </li>
+
+      <li class="sidebar-nav-item nav-item dropdown">
+        <a class="js-scroll-trigger nav-link" href="#collapse1" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse1" aria-expanded="true">SKILLS TRAINING <i
+            class="fas fa-sort-down float-right"></i></a>
+        <div class="dropdown-divider"></div>
+        <ul class="collapse sidebar__submenu" id="collapse1" data-parent="#sidebar-wrapper">
+          <li class="nav-item">
+            <a class="js-scroll-trigger" href="">Short Courses</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-nav-item nav-item dropdown">
+        <a class="js-scroll-trigger nav-link" href="#collapse2" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse2" aria-expanded="true">  JOB MATCHING <i
+            class="fas fa-sort-down float-right"></i></a>
+        <div class="dropdown-divider"></div>
+        <ul class="collapse sidebar__submenu" id="collapse2" data-parent="#sidebar-wrapper">
+          <li class="nav-item">
+            <a class="js-scroll-trigger" href="">Job Application</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-nav-item nav-item dropdown">
+        <a class="js-scroll-trigger nav-link" href="#collapse3" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse3" aria-expanded="true">ABOUT<i
+            class="fas fa-sort-down float-right"></i></a>
+        <div class="dropdown-divider"></div>
+        <ul class="collapse sidebar__submenu" id="collapse3" data-parent="#sidebar-wrapper">
+          <li class="nav-item">
+            <a class="js-scroll-trigger" href="">Privacy Policy</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-nav-item nav-item dropdown">
+        <a class="js-scroll-trigger nav-link" href="#collapse4" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse4" aria-expanded="true">FAQ <i
+            class="fas fa-sort-down float-right"></i></a>
+        <div class="dropdown-divider"></div>
+        <ul class="collapse sidebar__submenu" id="collapse4" data-parent="#sidebar-wrapper">
+          <li class="nav-item">
+            <a class="js-scroll-trigger" href="#FAQ">Frequently Asked Questions</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-nav-item nav-item dropdown">
+        <a class="js-scroll-trigger nav-link" href="#collapse5" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse5" aria-expanded="true">PEOPLE <i
+            class="fas fa-sort-down float-right"></i></a>
+        <div class="dropdown-divider"></div>
+        <ul class="collapse sidebar__submenu" id="collapse5" data-parent="#sidebar-wrapper">
+          <li class="nav-item">
+            <a class="js-scroll-trigger" href="#team">Team</a>
+          </li>
+        </ul>
+      </li>
+
+      
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#contact">JobConnect</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#contact">Connect with us</a>
+        <ul class="sidebar-inner-link">
+          <li>
+            <a href="https://facebook.com">
+              <span class="fab fa-facebook-f fa-lg"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com">
+              <span class="fab fa-twitter fa-lg"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com">
+              <span class="fab fa-instagram fa-lg"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com">
+              <span class="fab fa-linkedin-in fa-lg"></span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Login to JobConnect</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="login-form"> <!-- Use id to target in JavaScript -->
+                            <div class="form-group">
+                                <label for="login-email">Email address</label>
+                                <input type="email" class="form-control" id="login-email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Password</label>
+                                <input type="password" class="form-control" id="login-password" name="password" placeholder="Enter your password" required>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <p>Don't have an account? <a href="/register.html">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+ 
+ <!-- Footer -->
+<footer class="footer">
+    <div class="footer__wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <h4>About</h4>
+                    <a href="#about">
+                        <p>About Us</p>
+                    </a>
+                    <a href="#services">
+                        <p>Services</p>
+                    </a>
+                    <a href="#team">
+                        <p>Our Team</p>
+                    </a>
+                    <a href="#careers">
+                        <p>Careers</p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h4>Support</h4>
+                    <a href="#faq">
+                        <p>FAQ</p>
+                    </a>
+                    <a href="#contact">
+                        <p>Contact</p>
+                    </a>
+                    <a href="#privacy">
+                        <p>Privacy Policy</p>
+                    </a>
+                    <a href="#terms">
+                        <p>Terms of Service</p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-3">
+                  <h4>Social</h4>
+                  <ul class="list-unstyled">
+                      <li><a href="https://twitter.com/yourprofile" target="_blank">Twitter</a></li>
+                      <li><a href="https://facebook.com/yourprofile" target="_blank">Facebook</a></li>
+                      <li><a href="https://instagram.com/yourprofile" target="_blank">Instagram</a></li>
+                      <li><a href="https://linkedin.com/company/yourprofile" target="_blank">LinkedIn</a></li>
+                  </ul>
+              </div>
+              <div class="col-12 col-md-3">
+                <h4>Contact Us</h4>
+                <form id="enquiry-form">
+                    <input type="text" id="enquiry-email" class="form-control" placeholder="Email Address" required>
+                    <textarea id="enquiry-message" class="form-control mt-2" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
