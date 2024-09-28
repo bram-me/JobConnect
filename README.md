@@ -68,7 +68,7 @@ Despite the continent’s growth prospects, challenges such as uncertain global 
 
 1. **Clone the repository:**
    ```bash
-   [git clone https://github.com/bram-me/jobconnect.git](https://github.com/bram-me/JobConnect.git)
+   [git clone [https://github.com/bram-me/jobconnect.git])
 
 Install dependencies:
 
