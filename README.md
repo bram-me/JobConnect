@@ -107,7 +107,7 @@ Special thanks to the open-source projects and resources that inspired JobConnec
 This project is a design based one. I used standard HTML, CSS, JAVASCRIPT to design this beautiful template and this design is inspired from the website [Cornell Tech](https://tech.cornell.edu/)
 
 ## Live Demo
-This project is deployed in github. Please visit ([https://jobconnect-2mny.onrender.com/]) or click [LIVE DEMO]([(https://jobconnect-2mny.onrender.com/)/)/ to preview the webpage design.
+This project is deployed in github. Please visit ([https://jobconnect-2mny.onrender.com/]) to preview the webpage design.
 ## Platform
 This template is developed using HTML5, CSS3, [Bootstrap(4.3.1)](https://getbootstrap.com/docs/4.3/getting-started/introduction/) and I used JavaScript libraries like [Flickity](https://flickity.metafizzy.co/), [Slick slider](https://kenwheeler.github.io/slick/). For IDE, I used [VScode](https://code.visualstudio.com/).
 
