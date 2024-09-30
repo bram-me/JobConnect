@@ -13,6 +13,7 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <title>JobConnect</title>
 </head>
 
@@ -36,7 +37,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
+          
+          <li class="nav-item dropdown">          
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               SKILLS TRAINING
@@ -119,9 +121,13 @@
           </li>
                               
           <!-- Search icon flip -->
-          <li class="nav-item">
-            <i class="fas fa-search fa-flip-horizontal"></i>
-          </li>
+          <div class="search-container">
+            <li class="nav-item">
+              <i id="search-icon" class="fas fa-search fa-flip-horizontal"></i>
+            </li>
+            <input type="text" id="search-bar" placeholder="Search..." style="display: none;">
+          </div>
+          
         </ul>
       </div>
     </div>
@@ -131,18 +137,36 @@
   <a class="menu-toggle rounded for__mob" href="#">
     <i class="fas fa-bars"></i>
   </a>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar-wrapper">
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <a class="js-scroll-trigger" href="#page-top">JOBCONNECT</a>
       </li>
-
+     
+     
       <li class="sidebar-nav-item nav-item dropdown">
-        <a class="js-scroll-trigger nav-link" href="#collapse1" id="navbarDropdown" role="button"
-          data-toggle="collapse" aria-controls="collapse1" aria-expanded="true">SKILLS TRAINING <i
+        <a class="js-scroll-trigger nav-link" href="#collapse2" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse2" aria-expanded="true">REGISTER/ LOGIN <i
             class="fas fa-sort-down float-right"></i></a>
         <div class="dropdown-divider"></div>
-        <ul class="collapse sidebar__submenu" id="collapse1" data-parent="#sidebar-wrapper">
+        <ul class="collapse sidebar__submenu" id="collapse2" data-parent="#sidebar-wrapper">
+          <li class="nav-item">
+            <a class="js-scroll-trigger" href="register.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="js-scroll-trigger" href="login.html">Login</a>
+          </li>
+        </ul>
+      </li>
+
+
+      <li class="sidebar-nav-item nav-item dropdown">
+        <a class="js-scroll-trigger nav-link" href="#collapse3" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse3" aria-expanded="true">SKILLS TRAINING <i
+            class="fas fa-sort-down float-right"></i></a>
+        <div class="dropdown-divider"></div>
+        <ul class="collapse sidebar__submenu" id="collapse3" data-parent="#sidebar-wrapper">
           <li class="nav-item">
             <a class="js-scroll-trigger" href="">Short Courses</a>
           </li>
@@ -150,11 +174,11 @@
       </li>
 
       <li class="sidebar-nav-item nav-item dropdown">
-        <a class="js-scroll-trigger nav-link" href="#collapse2" id="navbarDropdown" role="button"
-          data-toggle="collapse" aria-controls="collapse2" aria-expanded="true">  JOB MATCHING <i
+        <a class="js-scroll-trigger nav-link" href="#collapse4" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse4" aria-expanded="true">  JOB MATCHING <i
             class="fas fa-sort-down float-right"></i></a>
         <div class="dropdown-divider"></div>
-        <ul class="collapse sidebar__submenu" id="collapse2" data-parent="#sidebar-wrapper">
+        <ul class="collapse sidebar__submenu" id="collapse4" data-parent="#sidebar-wrapper">
           <li class="nav-item">
             <a class="js-scroll-trigger" href="">Job Application</a>
           </li>
@@ -162,11 +186,11 @@
       </li>
 
       <li class="sidebar-nav-item nav-item dropdown">
-        <a class="js-scroll-trigger nav-link" href="#collapse3" id="navbarDropdown" role="button"
-          data-toggle="collapse" aria-controls="collapse3" aria-expanded="true">ABOUT<i
+        <a class="js-scroll-trigger nav-link" href="#collapse5" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse5" aria-expanded="true">ABOUT<i
             class="fas fa-sort-down float-right"></i></a>
         <div class="dropdown-divider"></div>
-        <ul class="collapse sidebar__submenu" id="collapse3" data-parent="#sidebar-wrapper">
+        <ul class="collapse sidebar__submenu" id="collapse5" data-parent="#sidebar-wrapper">
           <li class="nav-item">
             <a class="js-scroll-trigger" href="">Privacy Policy</a>
           </li>
@@ -174,11 +198,11 @@
       </li>
 
       <li class="sidebar-nav-item nav-item dropdown">
-        <a class="js-scroll-trigger nav-link" href="#collapse4" id="navbarDropdown" role="button"
-          data-toggle="collapse" aria-controls="collapse4" aria-expanded="true">FAQ <i
+        <a class="js-scroll-trigger nav-link" href="#collapse6" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse6" aria-expanded="true">FAQ <i
             class="fas fa-sort-down float-right"></i></a>
         <div class="dropdown-divider"></div>
-        <ul class="collapse sidebar__submenu" id="collapse4" data-parent="#sidebar-wrapper">
+        <ul class="collapse sidebar__submenu" id="collapse6" data-parent="#sidebar-wrapper">
           <li class="nav-item">
             <a class="js-scroll-trigger" href="#FAQ">Frequently Asked Questions</a>
           </li>
@@ -186,11 +210,11 @@
       </li>
 
       <li class="sidebar-nav-item nav-item dropdown">
-        <a class="js-scroll-trigger nav-link" href="#collapse5" id="navbarDropdown" role="button"
-          data-toggle="collapse" aria-controls="collapse5" aria-expanded="true">PEOPLE <i
+        <a class="js-scroll-trigger nav-link" href="#collapse7" id="navbarDropdown" role="button"
+          data-toggle="collapse" aria-controls="collapse7" aria-expanded="true">PEOPLE <i
             class="fas fa-sort-down float-right"></i></a>
         <div class="dropdown-divider"></div>
-        <ul class="collapse sidebar__submenu" id="collapse5" data-parent="#sidebar-wrapper">
+        <ul class="collapse sidebar__submenu" id="collapse7" data-parent="#sidebar-wrapper">
           <li class="nav-item">
             <a class="js-scroll-trigger" href="#team">Team</a>
           </li>
@@ -229,6 +253,7 @@
     </ul>
   </nav>
 </header>
+
 
 
  <!-- Main -->
@@ -515,6 +540,8 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="import '@fortawesome/fontawesome-free/css/all.min.css';
+  "></script>
   <script src="script.js"></script>
 </body>
 

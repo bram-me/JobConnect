@@ -67,6 +67,16 @@ $(function () {
     // });
 });
 
+document.getElementById("search-icon").addEventListener("click", function() {
+    var searchBar = document.getElementById("search-bar");
+    if (searchBar.style.display === "none") {
+      searchBar.style.display = "inline-block"; // Show the search bar
+      searchBar.focus(); // Focus the input field
+    } else {
+      searchBar.style.display = "none"; // Hide the search bar
+    }
+  });
+  
 
 // Global notification function
 function showNotification(message, type = 'info') {
@@ -355,7 +365,9 @@ document.getElementById('register-form')?.addEventListener('submit', async funct
         // Handle the response from the server
         if (response.ok) {
             showNotification('Registration successful!', 'success');
-            window.location.href = 'login.html'; // Redirect to login after successful registration
+            document.getElementById('register-form').reset(); // Clear form fields
+            window.location.href = '#personalDetails'; // Redirect to personalDetails after successful registration
+            showSection('personalDetails'); // Show the personal details section
         } else {
             showNotification(data.message || 'Registration failed. Please try again.', 'error');
         }
@@ -364,6 +376,19 @@ document.getElementById('register-form')?.addEventListener('submit', async funct
         showNotification('There was an error with your registration. Please try again.', 'error');
     }
 });
+
+// Function to show specific sections
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.add('hidden'); // Hide all sections
+    });
+    const activeSection = document.getElementById(sectionId);
+    if (activeSection) {
+        activeSection.classList.remove('hidden'); // Show the active section
+    }
+}
+
 
 // Add this script to your existing JavaScript file or in a <script> tag
 document.getElementById('logoutButton').addEventListener('click', async function(event) {

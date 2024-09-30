@@ -13,7 +13,7 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>JobConnect</title>
+  <title>JobConnect_Register</title>
 </head>
 
 <body>
@@ -36,7 +36,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+
           <li class="nav-item dropdown">
+            <li class="nav-item" id="registerItem">
+              <a class="btn btn-sm btn-primary nav-btn" href="index.html">HOME</a>
+          </li>       
+            </li>
+
+          <li class="nav-item dropdown">          
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               SKILLS TRAINING
@@ -109,19 +116,14 @@
             </div>
             </li>
             <li class="nav-item" id="registerItem">
-              <a class="btn btn-sm btn-primary nav-btn" href="register.html">Register</a>
-          </li>
-          <li class="nav-item" id="loginItem">
               <a class="btn btn-sm btn-primary nav-btn" href="login.html">Login</a>
-          </li> 
+          </li>
+          
           <li class="nav-item" id="logoutItem" style="display: none;">
               <a class="btn btn-sm btn-secondary nav-btn" href="#" id="logoutButton">Logout</a>
           </li>
                               
-          <!-- Search icon flip -->
-          <li class="nav-item">
-            <i class="fas fa-search fa-flip-horizontal"></i>
-          </li>
+          
         </ul>
       </div>
     </div>
@@ -131,11 +133,22 @@
   <a class="menu-toggle rounded for__mob" href="#">
     <i class="fas fa-bars"></i>
   </a>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar-wrapper">
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <a class="js-scroll-trigger" href="#page-top">JOBCONNECT</a>
       </li>
+
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="index.html">HOME</a>
+      </li>
+
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="login.html">LOGIN</a>
+      </li>
+    
+      
 
       <li class="sidebar-nav-item nav-item dropdown">
         <a class="js-scroll-trigger nav-link" href="#collapse1" id="navbarDropdown" role="button"
@@ -232,6 +245,7 @@
 
 
     <main class="container mt-5">
+      <section id="register">         
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
@@ -239,32 +253,71 @@
                         <h3>Register to JobConnect</h3>
                     </div>
                     <div class="card-body">
-                        <form action="/register" method="POST">
+                        <form action="/register" method="POST" id="register-form">
                             <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                                <label for="register-name">Full Name</label>
+                                <input type="text" class="form-control" id="register-name" name="name" placeholder="Enter your full name" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                <label for="register-email">Email address</label>
+                                <input type="email" class="form-control" id="register-email" name="email" placeholder="Enter your email" required>
                             </div>
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required>
+                                <label for="register-password">Password</label>
+                                <input type="password" class="form-control" id="register-password" name="password" placeholder="Create a password" required>
                             </div>
                             <div class="form-group">
-                                <label for="confirmPassword">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                                <label for="register-confirmPassword">Confirm Password</label>
+                                <input type="password" class="form-control" id="register-confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <p>Already have an account? <a href="/login.html">Login here</a></p>
+                        <p>Already have an account? <a href="login.html">Login here</a></p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    
+
+    <section id="personalDetails" class="section hidden">        
+      <div class="container mt-5" id="hidden">
+          <h1 class="text-center">Personal Details Form</h1>
+          <form id="personalDetailsForm" enctype="multipart/form-data" method="POST" action="/personalDetails">
+              <div class="form-group">
+                  <label for="personal-name">Full Name</label>
+                  <input type="text" class="form-control" id="personal-name" name="name" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                  <label for="personal-email">Email address</label>
+                  <input type="email" class="form-control" id="personal-email" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" name="phone_number" placeholder="Enter your phone number" required>
+              </div>
+              <div class="form-group">
+                  <label for="address">Address</label>
+                  <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+              </div>
+              <div class="form-group">
+                  <label for="cvUpload">Upload CV</label>
+                  <input type="file" class="form-control-file" id="cvUpload" name="cv" accept=".pdf, .doc, .docx" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-secondary ml-2" id="skipButton">Skip</button>
+              <p class="skip-text">You can skip this step and continue later.</p>
+          </form>
+      </div>
+  </section>
+   
+        
+
+
+
+
     </main>
 
  

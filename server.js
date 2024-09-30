@@ -221,7 +221,7 @@ app.get('/login', (req, res) => {
 });
 
 
-
+// personalDetails Route
 app.post('/personalDetails', [authenticateJWT, isTokenBlacklisted, upload.single('cv')], (req, res) => {
     const { name, email, phone_number, address } = req.body;
     const userId = req.user.id; // Get user ID from token
@@ -291,6 +291,8 @@ app.post('/register', async (req, res) => {
     }
 });
 
+
+// Login Route
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
@@ -321,6 +323,8 @@ app.post('/login', async (req, res) => {
     // Cleanup expired tokens after a successful login
     cleanupExpiredTokens();
 });
+
+// Logout Route
 app.post('/logout', async (req, res) => {
     const token = req.headers['authorization']?.split(' ')[1]; // Extract token from header
 

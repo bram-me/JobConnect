@@ -358,10 +358,33 @@ body {
     transform: translateY(-5%);
 }
 
+.nav-item i {
+    font-size: 24px; 
+    color: #000; 
+  }
+  
+
 .sidebar-nav-item i.active {
     transform: rotate(180deg);
 }
 
+.search-container {
+    display: flex;
+    align-items: center; 
+  }
+  
+  #search-bar {
+    padding: 5px;
+    width: 150px; 
+    height: 30px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px; 
+    transition: width 0.5s ease;
+    font-size: 14px; 
+  }
+  
+ 
 @media(min-width:1200px) {
     .navbar-nav .dropdown-menu.one {
         width: calc(100% + 10px);
@@ -2353,4 +2376,9 @@ body {
 }
 .footer .list-unstyled li {
     margin-bottom: 0.5rem;
+}
+
+
+.hidden {
+    display: none;
 }
