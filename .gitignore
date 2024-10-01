@@ -12,3 +12,18 @@ jspm_packages/
 
 # Environment variables
 .env
+
+# Ignore node_modules
+
+./node_modules
+# Logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+/node_modules
+jspm_packages/
+
+
+# Environment variables
+.env
